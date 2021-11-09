@@ -1,11 +1,11 @@
 {
   "name": "ytt-tool",
-  "version": "0.37.0",
+  "version": "0.0.37",
   "description": "abstraction around the ytt tool in npm for yaml templating",
-  "main": "index.js",
+  "main": "./bin/ytt",
   "repository": "https://github.com/daretodave/node-ytt",
   "bin": {
-    "ytt": "bin/ytt"
+    "ytt": "./bin/ytt"
   },
   "scripts": {
     "postinstall": "node src/install.js"

@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const os = require('os');
+const shell = require('shelljs');
+const root = require('app-root-path');
+const {join} = require("path");
+
+const ext =  os.type().includes("Windows") ? ".exe" : "";
+const cmd = `${join(__dirname, "ytt-cli") + ext} ${process.argv.slice(2).join(" ")}`;
+
+shell.exec(cmd)

@@ -3,12 +3,8 @@ const {join} = require("path");
 const fetch = require("node-fetch");
 const fs = require("fs").promises;
 
-const root = require('app-root-path');
-
-const pkg = require(root.path + "/package.json");
-
 function install() {
-    const version = pkg.version;
+    const version = "0.37.0";
 
     const os = type().toLowerCase();
 
@@ -24,7 +20,7 @@ function install() {
     const ext =  platform === "windows" ? ".exe" : "";
     const arch = process.arch.includes("arm") ? "arm" : "amd64";
     const url = releaseFor(version, platform, arch) + ext;
-    const cli = join(root.path, "bin", "ytt-cli" + ext);
+    const cli = join("bin", "ytt-cli" + ext);
 
     return fetch(url, {
         method: 'GET'
