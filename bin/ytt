@@ -2,7 +2,6 @@
 
 const os = require('os');
 const shell = require('shelljs');
-const root = require('app-root-path');
 const {join} = require("path");
 
 const ext =  os.type().includes("Windows") ? ".exe" : "";
