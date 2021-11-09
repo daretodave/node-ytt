@@ -1,0 +1,26 @@
+{
+  "name": "ytt-tool",
+  "version": "0.37.0",
+  "description": "abstraction around the ytt tool in npm for yaml templating",
+  "main": "index.js",
+  "repository": "https://github.com/daretodave/node-ytt",
+  "bin": {
+    "ytt": "bin/ytt"
+  },
+  "scripts": {
+    "postinstall": "node src/install.js"
+  },
+  "author": "dave.blue",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "node-fetch": "^2.6.6",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7"
+  },
+  "keywords": [
+    "ytt", "carvel"
+  ]
+}
