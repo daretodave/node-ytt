@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "repository": "https://github.com/daretodave/node-ytt",
   "bin": {
-    "ytt": "./bin/ytt"
+    "ytt": "bin/ytt"
   },
   "scripts": {
     "postinstall": "node src/install.js"
