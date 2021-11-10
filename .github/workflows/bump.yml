@@ -7,7 +7,7 @@ on:
 jobs:
   version:
     runs-on: ubuntu-latest
-    # if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
+    if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
     steps:
       - uses: actions/checkout@v2
         with:
