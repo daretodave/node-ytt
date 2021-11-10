@@ -1,6 +1,6 @@
 {
   "name": "node-ytt-cli",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "description": "abstraction around the ytt tool in npm for yaml templating",
   "main": "./src/index.js",
   "repository": "https://github.com/daretodave/node-ytt",
