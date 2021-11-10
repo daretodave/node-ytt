@@ -1,4 +1,5 @@
 name: bump
+on:
   push:
     branches:
       - main
