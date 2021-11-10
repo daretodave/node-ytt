@@ -1,0 +1,17 @@
+name: bump
+  push:
+    branches:
+      - main
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    # if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_ACTION_PAT }}
+      - run: git config --global user.name 'DR'
+      - run: git config --global user.email 'me@dave.blue'
+      - run: npm version patch -m "[RELEASE] %s"
+      - run: git push

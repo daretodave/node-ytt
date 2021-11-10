@@ -3,10 +3,12 @@ const {join} = require("path");
 const os = require("os");
 
 const ext =  os.type().includes("Windows") ? ".exe" : "";
+const cli = join(__dirname,"..", "bin", "ytt-cli") + ext;
+
 module.exports = {
     ytt: {
         exec(cmd, options = {silent: true}) {
-            const exec = `${join(__dirname,"..", "bin", "ytt-cli") + ext} ${cmd}`;
+            const exec = `${cli} ${cmd}`;
             const result = shell.exec(exec, options);
 
             if (result.code !== 0) {
