@@ -5,6 +5,16 @@ on:
       - main
 
 jobs:
+  setup:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Query releases for cli
+      run: |
+         CLI_TAG="$(curl --silent "https://api.github.com/repos/vmware-tanzu/carvel-ytt/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"([^"]+)".*/\1/')"
+
+         echo "CLI is @ ${CLI_TAG}"
+      shell: bash
   deploy:
     runs-on: ubuntu-latest
     if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
