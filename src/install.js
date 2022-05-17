@@ -26,7 +26,7 @@ function install() {
         }
 
         const ext =  platform === "windows" ? ".exe" : "";
-        const arch = process.arch.includes("arm") ? "arm" : "amd64";
+        const arch = process.arch.includes("arm") ? "arm64" : "amd64";
         const url = releaseFor(version, platform, arch) + ext;
         const cli = join(__dirname, "..", "bin", "ytt-cli" + ext);
 
