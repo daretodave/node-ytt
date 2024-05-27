@@ -4,7 +4,7 @@ const {join} = require("path");
 const fs = require("fs").promises;
 const fetch = require("node-fetch");
 
-const CLI_NAME="vmware-tanzu/carvel-ytt";
+const CLI_NAME="carvel-dev/ytt";
 
 install().catch(console.error);
 
@@ -26,7 +26,7 @@ function install() {
         }
 
         const ext =  platform === "windows" ? ".exe" : "";
-        const arch = process.arch.includes("arm") ? "arm" : "amd64";
+        const arch = process.arch.includes("arm") ? "arm64" : "amd64";
         const url = releaseFor(version, platform, arch) + ext;
         const cli = join(__dirname, "..", "bin", "ytt-cli" + ext);
 
