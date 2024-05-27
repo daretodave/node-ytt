@@ -1,6 +1,6 @@
 # ytt
 
-thin abstraction over the [ytt cli](https://github.com/vmware-tanzu/carvel-ytt) for install with npm, cross platform
+thin abstraction over the [ytt cli](https://github.com/carvel-dev/ytt) for install with npm, cross platform
 
 # install
 
@@ -10,7 +10,7 @@ npm i -g node-ytt-cli
 
 # usage
 
-> refer to ytt documentation on [cli](https://github.com/vmware-tanzu/carvel-ytt)
+> refer to ytt documentation on [cli](https://github.com/carvel-dev/ytt)
 
 ### as pkg
 ```javascript
